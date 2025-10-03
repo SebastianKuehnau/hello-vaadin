@@ -64,7 +64,7 @@ public class HelloVaadinView extends HorizontalLayout {
         });
 
         var cancelButton = new Button("Cancel");
-        cancelButton.addClickListener(e -> binder.readRecord(grid.asSingleSelect().getValue()));
+        cancelButton.addClickListener(e -> binder.reset(grid.asSingleSelect().getValue()));
 
         // form layout
         VerticalLayout formLayout = new VerticalLayout(avatarGroup, name, age, email,
